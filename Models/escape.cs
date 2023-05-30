@@ -1,25 +1,26 @@
 static class escape{
-    static string[] incogrnitaSalas;
-    static int estadoJuego = 0;
+    static string[] incognitaSalas = new string[4];
+    static int estadoJuego = 1;
     private static void inicializarJuego(){
-        incogrnitaSalas[0] = "quezo";
-        incogrnitaSalas[1] = "zapallo";
-        incogrnitaSalas[2] = "mama";
-        incogrnitaSalas[3] = "jana";
+        incognitaSalas[0] = "Queso";
+        incognitaSalas[1] = "042";
+        incognitaSalas[2] = "mama";
+        incognitaSalas[3] = "jana";
     }
     public static int estado(){
         return estadoJuego;
     }
     public static bool resolverSala(int sala, string incognita){
-        if(sala >= estado()){
+        if(sala != estado()){
             return false;
         }
         else{
-            if(incogrnitaSalas[0] == ""){
+            if(incognitaSalas[0] == null){
                 inicializarJuego();
             }
-            if(incognita == incogrnitaSalas[sala]){
+            if(incognita == incognitaSalas[sala-1]){
                 estadoJuego++;
+                return false;
             }
         }
         return true;

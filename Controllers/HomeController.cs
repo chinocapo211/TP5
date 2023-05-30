@@ -6,7 +6,7 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        return View("Index");
+        return View();
     }
     public IActionResult Tutorial()
     {
@@ -15,24 +15,15 @@ public class HomeController : Controller
     public IActionResult Comenzar()
     {
         int habitacion = escape.estado();
-        return View("habitacion" + habitacion);
+        return View("habitacion" + (habitacion));
     }
     public IActionResult Habitacion(int sala, string clave)
     {
-        if(sala != escape.estado()){
+        if(sala == escape.estado()){
+            if(escape.resolverSala(sala,clave) == false) ViewBag.Error = "La clave que introdujiste es incorrecta";
+            if(escape.estado() == 5) return View("Victoria");
             return View("habitacion"+escape.estado());
         }
-        if(escape.resolverSala(sala,clave) == true){
-            if(escape.estado() == 4){
-                return View("victoria");
-            }
-            else{
-                return View("habitacion"+escape.estado());
-            }
-        }
-        else{
-            ViewBag.Error = "La clave que introdujiste es incorrecta";
-            return View("habitacion"+escape.estado);
-        }
+        return View("Habitacion"+escape.estado());
     }
 }

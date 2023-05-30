@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="espacio"></div>
+<center>
+    <div>
+        <h1>Habitacion 1</h1>
+        <p>Entras a la habitacion y te encuentras con una computadora la cual solo tiene un teclado y muestra la siguiente foto. Para poder avanzar deberas descifrar el siguiente codigo en base al acertijo dado.</p>
+    </div>
+    <img class="acertijo" src="\img\38515444_10156447622420930_1991665554510839808_n.png" alt="">
+    <form action='@Url.Action("Habitacion","Home")'>
+        <input type="hidden" name="sala" value="1">
+        <input type="text" name="clave">
+        <input type="submit" value="Enviar">
+        <button onclick="alert('Derivado de la leche')"> Pista 1</button>
+        <button onclick="alert('A que huele el olor a pata?')"> Pista 2</button>
+    </form>
+</center>
+<footer>
+    <p>Trabajo realizado por Ivan Joaquin y Felipe Blaustein</p>
+</footer>
+</body>
+</html>

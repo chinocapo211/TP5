@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="espacio"></div>
+<center>
+    <div>
+        <h1>Habitacion 2</h1>
+        <p>Entras en la habitacion y te encuentras con una caja en el suelo la cual contiene la siguiente foto pegada por encima. Discifra el codigo e introducelo por los diales de la caja.</p>
+    </div>
+    <img class="acertijo" src="/img\101281856581176933001.jpg" alt="">
+    <form action='@Url.Action("Habitacion","Home")'>
+        <input type="hidden" name="sala" value="2">
+        <input type="text" name="clave">
+        <input type="submit" value="Enviar">
+    </form>
+    <div class="alert alert-danger">@ViewBag.Error</div>
+</center>
+<footer>
+    <p>Trabajo realizado por Ivan Joaquin y Felipe Blaustein</p>
+</footer>
+</body>
+</html>
