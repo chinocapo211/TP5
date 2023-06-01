@@ -4,8 +4,8 @@ static class escape{
     private static void inicializarJuego(){
         incognitaSalas[0] = "Queso";
         incognitaSalas[1] = "042";
-        incognitaSalas[2] = "mama";
-        incognitaSalas[3] = "jana";
+        incognitaSalas[2] = "N";
+        incognitaSalas[3] = "";
     }
     public static int estado(){
         return estadoJuego;

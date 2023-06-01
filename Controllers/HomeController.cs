@@ -19,6 +19,7 @@ public class HomeController : Controller
     }
     public IActionResult Habitacion(int sala, string clave)
     {
+        ViewBag.Error = null;
         if(sala == escape.estado()){
             if(escape.resolverSala(sala,clave) == false) ViewBag.Error = "La clave que introdujiste es incorrecta";
             if(escape.estado() == 5) return View("Victoria");

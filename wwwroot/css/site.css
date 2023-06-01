@@ -28,6 +28,10 @@ footer {
 .acertijo{
   padding: 10px;
 }
+p a{
+  text-decoration: none;
+  color: black;
+}
 
 center div {
   background-color:#ddd;

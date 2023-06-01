@@ -11,12 +11,19 @@
 <center>
     <div>
         <h1>Habitacion 3</h1>
+        <p>Entras a un cuarto todo obscuro, se prenden las luces y lo unico que puedes ver es un cuarto de paredes negras todas pintadas con la letra N. Das unos pasos para adelante y te encuentras con un cajón, lo abres y te encuentras con un papel con el siguiente acertijo:</p>
+        <h3>Aunque comience por la noche, termino prácticamente por la mañana. ¿Qué puedo ser?</h3>
+        <p>Adentro del cajon teencuentras con un aparato parecido a un blackberry, alli deberas de ingresar tu respuesta para avanzar.</p>
     </div>
-    <img class="acertijo" src="\img\38515444_10156447622420930_1991665554510839808_n.png" alt="">
+    <img class="acertijo" src="\img\negro.png" alt="negro" width="30%">
+    <img class="acertijo" src="\img\naranja.jpg" alt="naranja" width="30%">
+    <img class="acertijo" src="\img\nintendo.png" alt="nintendo" width="30%">
     <form action='@Url.Action("Habitacion","Home")'>
         <input type="hidden" name="sala" value="3">
         <input type="text" name="clave">
         <input type="submit" value="Enviar">
+        <button onclick="alert('Presta atencion a las fotos. Que letras tienen?')"> Pista 1</button>
+        <button onclick="alert('La respuesta esta en las paredes.')"> Pista 2</button>
     </form>
 </center>
 <footer>

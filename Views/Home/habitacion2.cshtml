@@ -13,13 +13,13 @@
         <h1>Habitacion 2</h1>
         <p>Entras en la habitacion y te encuentras con una caja en el suelo la cual contiene la siguiente foto pegada por encima. Discifra el codigo e introducelo por los diales de la caja.</p>
     </div>
-    <img class="acertijo" src="/img\101281856581176933001.jpg" alt="">
+    <img class="acertijo" src="/img\101281856581176933001.jpg" alt="" width="40%">
     <form action='@Url.Action("Habitacion","Home")'>
         <input type="hidden" name="sala" value="2">
         <input type="text" name="clave">
         <input type="submit" value="Enviar">
+        <button onclick="alert('El ultimo numero es el 2')"> Pista</button>
     </form>
-    <div class="alert alert-danger">@ViewBag.Error</div>
 </center>
 <footer>
     <p>Trabajo realizado por Ivan Joaquin y Felipe Blaustein</p>
