@@ -12,6 +12,10 @@ public class HomeController : Controller
     {
         return View("tutorial");
     }
+    public IActionResult Creditos()
+    {
+        return View("creditos");
+    }
     public IActionResult Comenzar()
     {
         int habitacion = escape.estado();
